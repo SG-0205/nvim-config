@@ -13,6 +13,10 @@ end
 local map = vim.keymap.set
 
 local keys = {
+  vim.keymap.set("n", "<leader>ca", function()
+    require("tiny-code-action").code_action()
+  end, { noremap = true, silent = true }),
+
   map("n", ";", ":", { desc = "CMD enter command mode" }),
   map("i", "jk", "<ESC>"),
 

@@ -7,6 +7,8 @@ null_ls.setup {
       extra_args = { "--style=Google" }, -- Appliquer le style Google
     },
   },
+  null_ls.builtins.code_actions.clang_format,
+  null_ls.builtins.code_actions.clangd,
   on_attach = function(client, bufnr)
     -- Activer le formatage automatique lors de la sauvegarde
     if client.supports_method "textDocument/formatting" then
